@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Editor</title>
+    <script>
+        function compileHTML(field, e) {
+            document.getElementById('output').innerHTML = field.value;
+        }
+
+        function compileCSS(field, e) {
+            document.getElementById('styling').innerHTML = field.value;
+        }
+    </script>
+</head>
+<body>
+    <style id="styling">
+
+    </style>
+
+    <div style="display: flex;">
+        <textarea style="flex:1" placeholder="HTML goes here..." onkeyup="compileHTML(this)" cols="30" rows="10"></textarea>
+        <textarea style="flex:1" placeholder="CSS goes here..." onkeyup="compileCSS(this)" cols="30" rows="10"></textarea>
+    </div>
+    <div id="output"></div>
+
+</body>
+</html>
